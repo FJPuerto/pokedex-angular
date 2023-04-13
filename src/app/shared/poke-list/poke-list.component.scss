@@ -1,0 +1,190 @@
+@import '../../../styles.scss';
+
+:host {
+
+    form {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(213, 213, 213);
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 2%;
+
+        input {
+            border: 1px black solid;
+            margin: 1%;
+        }
+
+        button {
+            width: 80%;
+            border-radius: 10px;
+            border: 1px black solid;
+            background-color: #260c0c95;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            transition: 0.5s;
+            background-color: #0e0e0e;
+        }
+    }
+
+    #digimon {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+
+        h2 {
+            font-size: 34px;
+            margin-bottom: 5%;
+            background-color: black;
+        }
+
+        img {
+            width: 20%;
+            margin: 0 auto;
+            margin-bottom: 2%;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            border: 1px black solid;
+            padding: 5%;
+            background-color: #ffffff36;
+            margin-bottom: 10%;
+
+            button {
+                margin: 0 auto;
+                margin-top: 2%;
+                width: 80%;
+                border-radius: 10px;
+                border: 1px black solid;
+                background-color: #ffffff36;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            button:hover {
+                transition: 0.5s;
+                background-color: #ffffff;
+                color: black;
+            }
+        }
+    }
+
+    .listagem {
+        display: flex;
+        justify-content: space-between;
+        padding: rem-calc(20) 0;
+        flex-wrap: wrap;
+
+        .pokemon {
+            position: relative;
+            display: flex;
+            width: calc(18% - 2.5rem);
+            background: var(--branco);
+            padding: rem-calc(20);
+            border-radius: rem-calc(10);
+            height: rem-calc(157 - 40);
+            margin-bottom: rem-calc(30);
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: 0.5s;
+
+            &__status {
+                h2 {
+                    font-size: rem-calc(22);
+                    font-style: italic;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    margin-bottom: rem-calc(10);
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        background: var(--cinza);
+                        font-size: rem-calc(13);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: rem-calc(50);
+                        width: rem-calc(60);
+                        margin-bottom: rem-calc(5);
+                        padding: rem-calc(3);
+                    }
+                }
+            }
+
+            &__image {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: rem-calc(90);
+                width: rem-calc(110);
+                right: rem-calc(20);
+                bottom: rem-calc(20);
+                transition: 0.5s;
+
+                img {
+                    width: rem-calc(60);
+                }
+            }
+
+            &__image:hover {
+                filter: drop-shadow(0 0 0.75rem var(--primary-color));
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+        }
+
+        .pokemon:hover {
+            background: rgba(255, 255, 255, 0.067);
+            color: var(--branco);
+            transition: 0.5s;
+        }
+
+    }
+
+    // Estilos para pantallas pequeñas
+    @media (max-width: 767px) {
+
+        .listagem {
+            display: flex;
+            justify-content: space-between;
+            padding: rem-calc(20) 0;
+            flex-wrap: wrap;
+
+            .pokemon {
+                position: relative;
+                display: flex;
+                width: calc(100% - 2.5rem);
+                background: var(--branco);
+                padding: rem-calc(20);
+                border-radius: rem-calc(10);
+                height: rem-calc(157 - 40);
+                margin-bottom: rem-calc(30);
+                cursor: pointer;
+                text-decoration: none;
+                color: var(--primary-color);
+            }
+        }
+
+    }
+}

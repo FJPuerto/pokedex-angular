@@ -1,0 +1,62 @@
+.footer {
+  background-color: #292929;
+  padding: 20px 0;
+  color: white;
+  padding: 5%;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .footer-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin: 0 10px;
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+
+  // Estilos para pantallas pequeñas
+  @media (max-width: 767px) {
+    .container {
+      .row {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        .col-md-6 {
+          margin-bottom: 20px;
+        }
+      }
+
+      .footer-menu {
+        justify-content: center;
+      }
+    }
+  }
+}
